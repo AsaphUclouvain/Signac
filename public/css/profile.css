@@ -1,0 +1,148 @@
+
+
+/* ===== USER INFO ===== */
+.user-info {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.picture {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #002559;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.picture span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #002559;
+}
+
+.other-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.profile-field {
+    background: #2c69be;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+/* ===== INCIDENTS ===== */
+.user-incidents {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-incidents h2 {
+    color: #002559;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.user-incidents ul {
+    list-style: none;
+}
+
+.user-incidents li {
+    display: grid;
+    grid-template-columns: 1fr 75px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-left: 3px solid #00214E;
+    border-right: 3px solid #00214E;
+}
+
+.user-incidents li:last-child {
+    margin-bottom: 0;
+}
+
+.user-incidents li div:first-child {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #002559;
+}
+
+.user-incidents li div:last-child {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===== EMPTY STATE ===== */
+.user-incidents .no-incidents {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    background: transparent;
+    border-left: 3px solid transparent;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    
+    .user-info, .user-incidents {
+        padding: 16px;
+    }
+    
+    .picture img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-info, .user-incidents {
+        padding: 12px;
+    }
+    
+    .picture img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .profile-field {
+        padding: 10px 12px;
+    }
+    
+    .user-incidents li {
+        padding: 12px;
+    }
+}
+
+.delete-button{
+    margin-left: auto;
+    background: #00214E;
+    cursor:pointer;
+}
+
+.logout-button{
+    cursor: pointer;
+    background: #00214E;
+}

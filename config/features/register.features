@@ -1,0 +1,41 @@
+Feature: register as a new user
+ 
+ Citizen are allowed to create an account anytime
+
+Scenario: The new citizen tries to register using valid credentials
+    Given the citizen's email address is avalaible
+    And the citizen's username is avalaible
+    And the citizen's password meets the required conditions
+    And confirmed password matches the first password entered
+    When the citizen creates an account
+    Then the citizen receives a confirmation email
+    And should be able to log in using their credentials
+
+Scenario: The new citizen tries to register using an already registered email
+    Given the citizen enters a used email address
+    When the citizen creates an account
+    Then the citizen should be notified that the address is already in use
+    And no account is created
+    And the credentials should be discarded
+
+Scenario: The new citizen tries to register using an already registered username
+    Given the citizen enters a used username
+    when the citizen creates an account
+    Then the citizen should be notified that the username is already in use
+    And no account is created
+    And the credentials should be discarded
+
+Scenario: The citizen tries to register using an invalid password
+    Given the citizen enters a password
+    And the password doesn't respects any of the password criteria
+    When the citizen creates an account
+    Then the citizen should be notified that the password is invalid
+    And no account is created
+    And the credentials should be discarded
+
+Scenario: The citizen tries to register entering password and confirmed password differents
+    Given the citizen mismatch passwords
+    When the citizen creates an account
+    Then the citizen should be notified of the mismatch
+    And no account is created
+    And the credentials should be discarded

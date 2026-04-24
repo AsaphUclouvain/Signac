@@ -1,0 +1,30 @@
+Feature: Website for UCL
+  A registered citizen wants to have access to all core functionalities of the website,
+  So that he can search incidents and navigate through paginated results.
+
+Scenario : show username and citizen profile picture 
+    Given the citizen is on the page Incidents page
+    When the citizen wants my picture and name to be shown 
+    And the citizen is not logged in 
+    Then the citizen should be redirected to the loging page 
+    When the citizen logged in succesfully or already logged in
+    Then the citizen should be able to look at his profile picture and name on upper right side of the page
+
+Scenario : View incidents 
+    Given the citizen is on the Incidents page
+    Then the citizen should see a search bubble
+    When the citizen enters a keyword
+    Then the citizen should be able to search for a specific incident
+    When the citizen should see a paginate numbers within bubbles
+    Then the citizen should be able to go from page to another
+
+Scenario : Report an incident
+    Given the citizen is on the Incidents page 
+    Then the citizen should see a report bubble 
+    When the citizen clicks on the report bubble
+    Then the citizen should be redirected to a report page
+
+
+    
+    
+

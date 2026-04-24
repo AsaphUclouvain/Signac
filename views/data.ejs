@@ -1,0 +1,114 @@
+<%- include('./templates/head', {title : 'List incidents'}) %>
+    <body>
+        <%- include('./templates/header', {fullname : user.fullname}) %>
+        <main>
+             <script src="/js/paginate.js"></script>
+            <div class="table-header">
+                <div>
+                    <p class="currentDate">
+                    </p>
+                </div>
+                <div>
+                    <a href="/api/incident/report">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Report</p>
+                    </a>
+                </div>
+            </div>
+            <div class="table-section">
+                <table id="mytable">
+                    <thead>
+                        <tr>
+                            <th>Reported by</th>
+                            <th>Description</th>
+                            <th>Address</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr>
+                            <td>
+                                <div class="profile">
+                                    <div class="photo">
+                                        <img class="photo-image" src="/img/user2.jpg">
+                                    </div>
+                                    <div>Lindsay Brudon</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    A bull throws civilians 2 meters off the ground. He's completely unleashed. I've just been a victim.
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Avenue de la Couronne 299, 1050 Ixelles, Brussels,
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    24/08/2025
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="profile">
+                                    <div class="photo">
+                                        <img class="photo-image" src="/img/user3.jpg">
+                                    </div>
+                                    <div>Marlo Van Steyn</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    A 900g meteorite fell in front of my door. No injuries, no deaths, no damage.
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Koningin Astridlaan 145, 9000 Ghent
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    29/09/2025
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="profile">
+                                    <div class="photo">
+                                        <img class="photo-image" src="/img/user1.jpg">
+                                    </div>
+                                    <div>Micheal Yanko</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    My bull escaped from his pen a months ago. I don't know where he is now. He's very brutal.
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Avenue de la Couronne 218, 1050 Ixelles, Brussels
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    30/09/2025
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="empty-list">
+            </div>
+            <div class="pagination">
+            </div>
+        </main>
+        <%- include('./templates/footer') %>
+    </body>
+</html>

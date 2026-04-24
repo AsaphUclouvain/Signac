@@ -1,0 +1,43 @@
+        <header>
+            <nav class="nav-break">
+                <div class="logo">
+                    <a href="/api/incident/list">
+                        <img class="logo-img" src="/img/signac-high-resolution-logo-transparent.png">
+                    </a>
+                </div>
+                <a class="profile" href="/api/user/dashboard">
+                    <div class="photo">
+                        <img class="photo-image" src="<%= avatar %>">
+                    </div>
+                    <div><%= fullname %></div>
+                </a>
+            </nav>
+            <nav class="first-nav">
+                <div class="logo">
+                    <a href="/api/incident/list">
+                        <img class="logo-img" src="/img/signac-high-resolution-logo-transparent.png">
+                    </a>
+                </div>
+                <ul class="links">
+                    <li>
+                        <form>
+                            <div class="search">
+                                <span class="search-icon material-symbols-outlined">search</span>
+                                <input type="search"
+                                    spellcheck="true"
+                                    id="search"
+                                    name="search"
+                                    placeholder="Search"
+                                    class="search-input">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <a class="profile" href="/api/user/dashboard">
+                    <div class="photo">
+                        <img class="photo-image" src="<%= avatar %>">
+                    </div>
+                    <div><%= fullname %></div>
+                </a>
+            </nav>
+        </header>

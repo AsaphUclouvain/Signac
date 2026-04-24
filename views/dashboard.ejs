@@ -1,0 +1,54 @@
+
+<%- include('./templates/head', {title : 'dashboard'}) %>
+    <body>
+        <%- include('./templates/header', {fullname : user.fullname, avatar : myAvatar}) %>
+        <main>
+            <div class="user-info">
+                <div class="picture">
+                    <img src="<%= otherAvatar %>" alt="Avatar">
+                    <span><%= other.username %></span>
+                </div>
+                <div class="other-info">
+                    <%if (user.username === other.username){%>
+                        <a href="/api/auth/logout">
+                            <button class="profile-field logout-button">
+                                logout
+                            </button>
+                        </a>
+                    <% } %>
+                    <div class="profile-field">
+                        <%= other.fullname %>
+                    </div>
+                    <div class="profile-field">
+                        <%= other.email %>
+                    </div>
+                </div>
+            </div>
+            <div class="user-incidents">
+                <h2>Incidents reported</h2>
+                <ul>
+                    <% if (other.incidents && other.incidents.length > 0) { %>
+                        <% for (const incident of other.incidents) { %>
+                            <li>
+                                <div>
+                                    <div><%= incident.description %></div>
+                                    <div><%= incident.address %></div>
+                                </div>
+                                <% if (other.username === user.username){ %>
+                                    <a href="/api/incident/delete/<%= incident._id %>">
+                                        <button class="profile-field delete-button">delete</button>
+                                    </a>
+                                <% } %>
+                            </li>
+                        <% } %>
+                    <% } else { %>
+                        <li class="no-incidents">
+                            <div>No reported incidents</div>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </main>
+        <%- include('./templates/footer') %>
+    </body>
+</html>

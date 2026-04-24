@@ -1,0 +1,28 @@
+Feature : website for UCL 
+    A registered citizen wants to have access to every core fonctionnalities of this website 
+    He should have access to all fonctionnalities of this page to report an incident
+
+Scenario: Report an incident
+    Given the citizen on the incidents listing page
+    When the citizen chooses to report a new incident
+    And the citizen supplies all address information required
+    And the citizen describes the incident
+    And the citizen reports the incident
+    Then the incident should be reviewed, validated and confirmed by the website support
+    And the incident is added to the incidents list with the user's informations and the date of the post
+    
+Scenario: Cancel an incident report
+    Given the citizen on the incident report page
+    When the report form is fully or partially filled
+    And the citizen chooses to cancel the incident report
+    And the citizen confirm the cancellation
+    Then all the information supplied are discarded
+    And the person is redirected to the incidents listing page
+
+
+
+
+
+    
+    
+

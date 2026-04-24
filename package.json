@@ -1,0 +1,38 @@
+{
+  "name": "p1-appsinf1-a17-asaph",
+  "version": "1.0.0",
+  "description": "Projet UCL groupe A17     Jean-françois Mewissen     Maxime Medvedev     Asaph Nzongan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect": "^3.7.0",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "graphql": "^16.11.0",
+    "jdenticon": "^3.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^8.19.1",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.9",
+    "nodemon": "^3.1.11",
+    "sharp": "^0.34.5",
+    "uuid": "^13.0.0",
+    "xss": "^1.0.15",
+    "zod": "^4.1.12"
+  }
+}

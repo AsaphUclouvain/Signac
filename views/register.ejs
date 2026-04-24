@@ -1,0 +1,48 @@
+<%- include('./templates/head', {title : 'register'}) %>
+    <body class="background-blue-3">
+        <%- include('./templates/simple_header') %>
+        <main>
+            <div class="register-box">
+                <form action="/api/auth/register"
+                      method="POST"
+                      enctype="application/x-www-form-urlencoded"
+                      id="register-form">
+                    <h2>Register</h2>
+                    <div class="error-message">
+                        <p><%= errorMsg %></p>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-signature"></i></span>
+                        <input type="text" name="fullname" value="<%= user.fullname %>" minlength="2" maxlength="20" required>
+                        <label for="fullname">Full Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" name="username" value="<%= user.username %>" minlength="2" maxlength="10" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" name="email" value="<%= user.email %>" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" name="confirm" required>
+                        <label for="confirm">Confirm Password</label>
+                    </div>
+                    <button class="button-auth" type="submit">Register</button>
+                    <div class="register-link">
+                        <p>Already have an account ? <a href="/api/auth/login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <%- include('./templates/footer') %>
+    </body>
+</html>
